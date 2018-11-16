@@ -1,0 +1,42 @@
+
+
+#include<stdio.h>
+
+int main(void)
+{
+    int x;
+    char c;
+
+    int scanfReturn=0;
+
+    int i;
+    for(i=0;i<10;i++){
+        scanfReturn=scanf("%d",&x);
+
+        printf("return is %d\n",scanfReturn);
+    }
+
+    return 0;
+}
+
+-----------------------------------------------------------
+
+/*
+1 2//这里有个回车
+return is 1
+return is 1//两个值都读进去了 且'\n'被丢弃出缓冲区
+1
+return is 1
+//这里输入了多个回车，scanf直接丢弃他们，但是不返回东西，说明还在scand()函数里面
+
+
+a
+return is 0
+return is 0
+return is 0
+return is 0
+return is 0
+return is 0
+return is 0//一共输出了10次
+Press any key to continue
+*/
