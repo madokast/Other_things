@@ -114,7 +114,7 @@ void getNameOfJavaSourceFile(char * fileName)
 		printf("\n Please enter the name of java source file>>");
 		scanf_s("%s", fileName, MAX_NAMELENTH);
 		
-		scanf_s("%c", &c, 1);//�鿴�������ǲ���ֻʣ��'\n'
+		scanf_s("%c", &c, 1);//查看缓冲区是不是只剩下'\n'
 		if (c != '\n')
 		{
 			clearBuffer();
